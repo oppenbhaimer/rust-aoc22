@@ -35,8 +35,8 @@ fn main() -> io::Result<()> {
 
         let last_a : usize = dock[b-1].len() - a;
         let elems = dock[b-1][last_a..].to_vec();
-        for elem in elems.iter().rev() {
-            dock[c-1].push(*elem);
+        for elem in elems {
+            dock[c-1].push(elem);
         }
 
         dock[b-1].drain(last_a..);
